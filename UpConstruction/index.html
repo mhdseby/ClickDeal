@@ -55,27 +55,31 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
+
           <li><a href="services.html">Services</a></li>
+          <li><a href="services.html">Products</a></li>
           <li><a href="projects.html">Projects</a></li>
 <!--          <li><a href="blog.html">Blog</a></li>-->
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+<!--          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+<!--            <ul>-->
+<!--              <li><a href="#">Dropdown 1</a></li>-->
+<!--              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+<!--                <ul>-->
+<!--                  <li><a href="#">Deep Dropdown 1</a></li>-->
+<!--                  <li><a href="#">Deep Dropdown 2</a></li>-->
+<!--                  <li><a href="#">Deep Dropdown 3</a></li>-->
+<!--                  <li><a href="#">Deep Dropdown 4</a></li>-->
+<!--                  <li><a href="#">Deep Dropdown 5</a></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--              <li><a href="#">Dropdown 2</a></li>-->
+<!--              <li><a href="#">Dropdown 3</a></li>-->
+<!--              <li><a href="#">Dropdown 4</a></li>-->
+<!--            </ul>-->
+          <!--          </li>-->
+          <li><a href="contact.html" class="register-box">Register Now</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Review</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -89,6 +93,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
+            <p data-aos="fade-up" class="p-5">WHAT ARE YOU LOOKING FOR?</p>
             <h2 data-aos="fade-down">Welcome to <span>ClickDeal</span><span style="color: #feb900">.</span></h2>
             <p data-aos="fade-up">Any deal at your fingertip.</p>
             <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
@@ -136,49 +141,33 @@
           <div class="col-lg-6" data-aos="fade">
             <div class="d-flex flex-row">
             <form action="forms/quote.php" method="post" class="php-email-form">
-              <h3>Job Requirement</h3>
+              <h3>Book a service!</h3>
               <p>Spare a moment to fill out the form!<br>
                 And get your work done with perfection!!</p>
               <div class="row gy-3">
 
-                <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required>
-                </div>
+                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                  <label class="btn btn-secondary" for="option1">Work</label>
 
-                <div class="col-md-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
+                  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                  <label class="btn btn-secondary" for="option2">Product</label>
 
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Phone" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
-
-                  <button type="submit">Submit</button>
-                </div>
-
-              </div>
-            </form>
-              <form action="forms/quote.php" method="post" class="php-email-form">
-                <h3>Worker Registration</h3>
-                <p>Spare a moment to fill out the form!<br>
-                  And get rewarded with abundant work opportunities!!</p>
-                <div class="row gy-3">
+                  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" >
+                  <label class="btn btn-secondary" for="option3">Other</label>
 
                   <div class="col-md-12">
-                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                    <input type="text" name="other" class="form-control" placeholder="if other, mention" required>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control" placeholder="Name of Customer" required>
                   </div>
 
                   <div class="col-md-12 ">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                    <input type="text" class="form-control" name="email" placeholder="Vendor Type : (eg:- Paints/Painter)" required>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="description" rows="6" placeholder="Service description" required></textarea>
                   </div>
 
                   <div class="col-md-12">
@@ -186,8 +175,63 @@
                   </div>
 
                   <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                    <input type="text" class="form-control" name="address" placeholder="Address" required>
                   </div>
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="date" placeholder="Expected date and time of service" required>
+                  </div>
+
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
+
+                    <button type="submit">Submit</button>
+                  </div>
+              </div>
+            </form>
+              <form action="forms/quote.php" method="post" class="php-email-form">
+                <h3>Vendor/Worker Registration</h3>
+                <p>Spare a moment to fill out the form!<br>
+                  And get rewarded with abundant work opportunities!!</p>
+                <div class="row gy-3">
+
+                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                  <label class="btn btn-secondary" for="option1">Worker</label>
+
+                  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                  <label class="btn btn-secondary" for="option2">Shop</label>
+
+                  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" >
+                  <label class="btn btn-secondary" for="option3">Other</label>
+
+                  <div class="col-md-12">
+                    <input type="text" name="other" class="form-control" placeholder="if other, mention" required>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control" placeholder="Name of Vendor" required>
+                  </div>
+
+                  <div class="col-md-12 ">
+                    <input type="text" class="form-control" name="email" placeholder="Vendor Type : (eg:- Paints/Painter)" required>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="address" rows="6" placeholder="Address" required></textarea>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="exp" placeholder="Experience" required>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="loc" placeholder="Location / Locality of service (town, pincode)" required>
+                  </div>
+
 
                   <div class="col-md-12 text-center">
                     <div class="loading">Loading</div>
@@ -209,7 +253,7 @@
 
 
 
-    <!-- ======= Services Section ======= -->
+    <!-- ======= *-s Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -1020,7 +1064,9 @@
   </footer>
   <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!--  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center m-3 mb-4"><img width="80rem" height="80rem" src="./assets/img/WhatsApp.svg.png" /></a>
+
 
   <div id="preloader"></div>
 

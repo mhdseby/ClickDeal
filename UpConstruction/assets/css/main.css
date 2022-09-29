@@ -174,7 +174,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: var(--color-primary);
+  /*background: var(--color-primary);*/
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -193,6 +193,36 @@ section {
 }
 
 .scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.whatsapp {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.whatsapp i {
+  font-size: 24px;
+  color: var(--color-secondary);
+  line-height: 0;
+}
+
+.whatsapp:hover {
+  background: #ffc732;
+  color: #fff;
+}
+
+.whatsapp.active {
   visibility: visible;
   opacity: 1;
 }
@@ -281,6 +311,14 @@ section {
   color: var(--color-primary);
 }
 
+.register-box{
+  border: #8a680c 0.1rem solid;
+}
+
+.register-box:hover {
+  border: #feb900 0.1rem solid;
+  border-radius: 1rem;
+}
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
